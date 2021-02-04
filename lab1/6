@@ -1,0 +1,25 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    int n, p = 0;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < p; j ++)
+            cout << " ";
+        for (int j = 0; j < n - 2 * p; j ++)
+            cout << "*";
+        for (int j = 0; j < p; j ++)
+            cout << " ";
+        cout << endl;
+        p++;
+        if (n - 2*p < 1)
+            break;
+    }
+    return 0;
+}
