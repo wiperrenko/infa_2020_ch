@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+bool isprime(int n)
+{
+    bool b = true;
+    for (int i = 2; i*i <= n; i++)
+    {
+        if (n % i == 0)
+        {
+            b = false;
+            break;
+        }
+    }
+    return b;
+}
+
+int prime(int n)
+{
+    int i = 0, j = 2;
+    while (i < n)
+    {
+        if (isprime(j))
+            i++;
+        j++;
+    }
+    return j - 1;
+}
+
+int main()
+
+{
+    int a;
+    cin >> a;
+    cout << prime(a);
+    return 0;
+}
+
+
